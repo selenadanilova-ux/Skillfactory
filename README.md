@@ -15,9 +15,9 @@
 
 ## 🛠 Технологии в обучении
 В процессе прохождения курса я использую:
-![Python](https://github.com/CrimsonMirror/PythonVideo)
-![Python requests]([https://img.shields.io](https://medium.com/@qebuzzz/unleashing-the-power-of-python-requests-for-http-communication-cbf6b0a7d2a3))
-![Pytest](https://en.wikipedia.org/wiki/File%3APytest_logo.svg)
-![Selenium](https://commons.wikimedia.org/wiki/File:Selenium_logo.svg)
+![Python]
+![Python requests]
+![Pytest]
+![Selenium]
 ---
 *Учусь и становлюсь лучше с каждым коммитом!*
