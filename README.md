@@ -8,16 +8,16 @@
 
 Каждая папка соответствует отдельному модулю обучения или конкретному заданию:
 
-*   **[Название папки 1]** — Краткое описание (например: Верстка лендинга, HTML/CSS).
-*   **[Название папки 2]** — Описание (например: Калькулятор на JavaScript).
-*   **[Название папки 3]** — Описание (например: Работа с API и асинхронностью).
+*   **Module 18. Data Types** — Электронный дневник для школьного класса на Python.
+*   **Module 20. Reading and Writing Data to a File** — Cчитывание данных из файла в формате JSON, их обработка и поиск информации на Python.
+*   **Module 24. Pytest Testing Framework and Automated Tests for REST APIs** — Юнит-тесты к приложению Калькулятор, тесты для REST API-интерфейса сервиса PetFriends на Python.
+*   **Module 30: Finding Elements with Selenium. Waiting for an Element on a Page** - UI-тесты сервиса PetFriends с неявными и явными ожиданиями всех элементов на Python.
 
 ## 🛠 Технологии в обучении
 В процессе прохождения курса я использую:
-![HTML5](https://img.shields.io) 
-![CSS3](https://img.shields.io) 
-![Python](https://img.shields.io)
-![Git](https://img.shields.io)
-
+![Python](https://github.com/CrimsonMirror/PythonVideo)
+![Python requests]([https://img.shields.io](https://medium.com/@qebuzzz/unleashing-the-power-of-python-requests-for-http-communication-cbf6b0a7d2a3))
+![Pytest](https://en.wikipedia.org/wiki/File%3APytest_logo.svg)
+![Selenium](https://commons.wikimedia.org/wiki/File:Selenium_logo.svg)
 ---
 *Учусь и становлюсь лучше с каждым коммитом!*
