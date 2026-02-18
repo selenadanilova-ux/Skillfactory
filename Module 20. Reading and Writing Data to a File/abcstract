@@ -1,0 +1,104 @@
+Открытие файла
+Открыть файл можно двумя способами:
+
+Используя функции open(). После завершения работы с файлом нужно будет его закрыть с помощью close():
+f = open('file.txt', 'a')
+...
+f.close()
+С помощью менеджера контекстаwith, который автоматически и самостоятельно закроет файл, после работы с ним:
+with open('file.txt', 'a') as f:
+    ...
+Для открытия файла используется функция open(). Эта функция имеет два аргумента: open(file, mode="a")
+
+Аргумент file принимает строку, в которой указан путь к файлу.
+Аргумент mode принимает режим, в котором необходимо открыть файл.
+По умолчанию аргумент mode принимает значение «rt» — чтение текстового файла.
+Также можно указать следующие значения для режима открытия файла:
+
+'r' — открывает файл для чтения. Возвращает ошибку, если указанный файл не существует (задан по умолчанию).
+'w' — открывает файл для записи, причем перезаписывает содержимое, если оно есть. Создает файл, если он не существует.
+'a' — открывает файл для записи и добавляет новую информацию, не перезаписывая существующую. Создает файл, если он не существует.
+'t' — открывает как текстовый файл (задан по умолчанию).
+'b' — открывает как двоичный файл.
+'+' — работа с файлом и в режиме чтения, и в режиме записи.
+Чтение данных из файла
+Прочитать данные из файла целиком можно с помощью функции read():
+
+with open('file.txt', 'r') as f:
+    text = f.read()
+Также с помощью функцию read() можно прочитать определенное количество символов из файла:
+
+with open('file.txt', 'r') as f:
+    text = f.read(16)
+Прочитать файл построчно можно с помощью функции readline():
+
+with open('file.txt', 'r') as f: 
+    first_line = f.readline()    # первая строка
+    second_line = f.readline()   # вторая строка
+Прочитать файл целиком, а каждую строку записать в список можно с помощью функции readlines():
+
+with open('file.txt', 'r') as f:
+    for line in f.readlines():
+        print(line)
+Прочитать файл построчно можно с помощью цикла:
+
+with open('file.txt', 'r') as f:
+    for line in f:
+        print(line)
+Запись данных в файл
+Чтобы записать данные в файл используется функция write():
+
+with open('file.txt', 'w') as f:
+    f.write('text')
+Записывать в файл данные можно построчно с помощью метода writelines():
+
+with open('file.txt', 'w') as f:
+    f.writelines(list_of_strings)
+Также записать данные в файл можно с помощью функции print():
+
+with open('file.txt', 'w') as f:
+    print(some_data, file=f)
+Указание пути к файлам
+Корректно путь можно указать тремя способами:
+
+с помощью r-строк: r'C:\Users\Liudmila\Python\file.txt'
+с помощью двойных обратных слэшей: 'C:\\Users\\Liudmila\\Python\\file.txt'
+с помощью обратных слешей: 'C:/Users/Liudmila/Python/file.txt'
+JSON
+Чтобы считать данные из JSON файла, используют метод json.loads:
+
+import json
+
+with open("translator.json", "r") as my_file:
+    translator_json = my_file.read()
+translator = json.loads(translator_json)
+Также можно считать данные из JSON файла, используя метод json.load:
+
+import json
+
+with open("translator.json", "r") as my_file:
+    translator = json.load(my_file)
+Чтобы записать данные в файл в формате JSON, используется метод json.dumps:
+
+import json
+
+translator = {
+'bug':'ошибка', 
+'function':'функция', 
+'approve':'согласовать'
+}
+translator_json = json.dumps(translator)
+with open("translator.json", "w") as my_file:
+    my_file.write(translator_json)
+Также для записи в файл можно использовать метод json.dump:
+
+import json
+
+translator = {
+'bugs':'ошибка', 
+'function':'функция', 
+'approve':'согласовать'
+}
+
+with open("translator.json", "w") as my_file:
+    json.dump(translator, my_file)
